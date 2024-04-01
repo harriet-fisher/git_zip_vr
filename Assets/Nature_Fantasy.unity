@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 210673245}
   - component: {fileID: 210673244}
   - component: {fileID: 210673243}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ Transform:
   m_GameObject: {fileID: 267138220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.71, y: 31.63, z: -0.52}
+  m_LocalPosition: {x: 21.71, y: 32.62, z: -0.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -358,6 +358,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
+  gravity: -9.81
+  groundCheck: {fileID: 210673245}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
   controller: {fileID: 267138222}
 --- !u!1001 &306946165
 PrefabInstance:
