@@ -9,10 +9,12 @@ public class ObjectSpawner : MonoBehaviour
     public float terrainLength = 100f;
     public float yOffset = 1f;
 
-    // Start is called before the first frame update
+    private List<GameObject> spawnedObjects = new List<GameObject>();
+
     void Start()
     {
         SpawnRandomObjects();
+        UIManager.Instance.UpdateUI(spawnedObjects);
     }
 
     void SpawnRandomObjects()
@@ -29,7 +31,8 @@ public class ObjectSpawner : MonoBehaviour
         {
             GameObject objToSpawn = (GameObject)objects[Random.Range(0, objects.Length)];
             Vector3 spawnPosition = GetRandomPosition();
-            Instantiate(objToSpawn, spawnPosition, Quaternion.identity);
+            GameObject spawnedObj = Instantiate(objToSpawn, spawnPosition, Quaternion.identity);
+            spawnedObjects.Add(spawnedObj);
         }
     }
 

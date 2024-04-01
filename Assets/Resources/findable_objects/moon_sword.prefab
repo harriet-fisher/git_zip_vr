@@ -9684,7 +9684,7 @@ GameObject:
   - component: {fileID: 2950408053177474559}
   - component: {fileID: 2942000598897040745}
   m_Layer: 0
-  m_Name: MoonSword 1
+  m_Name: moon_sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
